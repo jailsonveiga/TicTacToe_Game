@@ -4,6 +4,7 @@ public class TicTacToe {
 
     static ArrayList<Integer> playerPositions = new ArrayList<Integer>();
     static ArrayList<Integer> cpuPositions = new ArrayList<Integer>();
+
     public static void main(String[] args) {
         char[][] gameBoard = {{' ', '|', ' ', '|', ' '},
                 {'-', '+', '-', '+', '-'},
@@ -17,7 +18,7 @@ public class TicTacToe {
             Scanner scan = new Scanner(System.in);
             System.out.println("Enter your placement (1-9):");
             int playerPos = scan.nextInt();
-            while(playerPositions.contains(playerPos) || cpuPositions.contains(playerPositions)) {
+            while(playerPositions.contains(playerPos) || cpuPositions.contains(playerPos)) {
                 System.out.println("Position taken! Enter a correct Position");
                 playerPos = scan.nextInt();
             }
@@ -111,7 +112,7 @@ public class TicTacToe {
         List midCol = Arrays.asList(2, 5, 8);
         List rightCol = Arrays.asList(3, 6, 9);
         List cross1 = Arrays.asList(1, 5, 9);
-        List cross2 = Arrays.asList(7, 5, 3);
+        List cross2 = Arrays.asList(7, 5, 3); 
 
         List<List> winning = new ArrayList<List>();
         winning.add(topRow);
